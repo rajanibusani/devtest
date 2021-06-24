@@ -25,7 +25,7 @@ export default new Vuex.Store({
         title: "Mexican Shrimp Tacos",
         description: "crispy cheesy shrimp tacos and homemade salsa",
         image: require('../assets/images/tacos.jpeg'),
-        isActive: true
+        isActive: false
       },
       {
         id: 4,
