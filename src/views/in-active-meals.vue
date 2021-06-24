@@ -59,7 +59,6 @@ export default {
 </script>
 
 <style scoped>
-<style >
 .main-container{
 margin: 0 30px;
 }
