@@ -1,12 +1,16 @@
 <template>
   <div id="app">
+    <Header />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  //placeholder view, see router/index.js for children views
+import Header from "./components/header.vue";
+export default {  
+  components:{
+    Header
+  }
 }
 </script>
 

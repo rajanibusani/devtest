@@ -6,11 +6,15 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '*',
-    redirect: '/welcome'
+    redirect: '/meals'
   },
   {
-    path: '/welcome',
-    component: () => import('../views/Welcome.vue'),
+    path: '/meals',
+    component: () => import('../views/active-meals.vue'),
+  },
+  {
+    path: '/deleted-meals',
+    component: () => import('../views/in-active-meals.vue'),
   }
 ]
 
@@ -18,9 +22,9 @@ const router = new VueRouter({
   mode: 'history',
   // base: process.env.BASE_URL,
   routes,
-   scrollBehavior (to, from, savedPosition) {
-     return { x: 0, y: 0 }
-   }
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router
