@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <div class="search-container">
-      <input type="text" placeholder="Search meal.." v-model="searchQuery">   
+      <input type="search" placeholder="Search meal.." v-model="searchQuery">   
       <div >   
         <div >        
         <router-link to="/deleted-meals"> Show Deleted Meals</router-link>
@@ -65,6 +65,8 @@ export default {
   },
   computed: {
     ...mapGetters(["getActiveMeals"]),
+    // filtering meals based on search input. 
+    // we can search meals with both meal title and description.
     searchResults() {
       if (this.searchQuery) {
         return this.getActiveMeals.filter((meal) => {
